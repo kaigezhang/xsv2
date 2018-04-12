@@ -17,7 +17,7 @@ class Client:
         else:
             self.ACCESS_ID = settings.ALIYUN_ACCESSKEYID
             self.ACCESS_SECRET = settings.ALIYUN_ACCESSKEYSECRET
-            self.END_POINT = settings.ALIYUN_OSS_END_POINT
+            self.END_POINT = settings.ALIYUN_OSS_ENV_INTERNAL_POINT
 
         auth = oss2.Auth(self.ACCESS_ID, self.ACCESS_SECRET)
         self.service = oss2.Service(auth, self.END_POINT)
