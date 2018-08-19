@@ -14,7 +14,7 @@ RUN cd /tmp \
 	&& apt-get install -y curl apt-utils wget unzip\
 	&& rm -rf /var/lib/apt/lists/*
 
-RUN apt-get install software-properties-commo
+RUN apt-get install python-software-properties
 RUN add-apt-repository ppa:deadsnakes/ppa
 RUN apt-get update && apt-get install -y git emacs curl iputils-ping 
 # Install python/django dependencies 	    
