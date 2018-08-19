@@ -1,4 +1,4 @@
-FROM registry.docker-cn.com/library/ubuntu:16.04
+FROM ubuntu:16.04
 
 # Set the file maintainer (your name - the file's author)
 MAINTAINER Kaige zhang
@@ -8,8 +8,8 @@ ENV PROJECTDIR=/home/blog
 ENV FRONTENDDIR=/home/blog/frontend
 
 # Install Nginx.
-RUN rm /etc/apt/sources.list
-COPY sources.list /etc/apt/
+# RUN rm /etc/apt/sources.list
+# COPY sources.list /etc/apt/
 RUN apt-get update && apt-get install -y nginx
 
 # Turn off daemon mode

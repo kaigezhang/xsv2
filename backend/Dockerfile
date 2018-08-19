@@ -1,4 +1,4 @@
-FROM registry.docker-cn.com/library/ubuntu:16.04
+FROM ubuntu:16.04
 # Set the maintainer
 MAINTAINER Kaige zhang
 
@@ -7,8 +7,8 @@ ENV PROJECTDIR=/home/blog
 ENV BACKENDDIR=/home/blog/backend
 
 # Install basic apps
-RUN rm /etc/apt/sources.list
-COPY sources.list /etc/apt/
+# RUN rm /etc/apt/sources.list
+# COPY sources.list /etc/apt/
 RUN add-apt-repository ppa:deadsnakes/ppa
 RUN apt-get update && apt-get install -y git emacs curl iputils-ping
 
