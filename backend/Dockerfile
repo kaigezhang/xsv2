@@ -14,9 +14,9 @@ RUN cd /tmp \
 	&& apt-get install -y curl apt-utils wget unzip\
 	&& rm -rf /var/lib/apt/lists/*
 
+RUN apt-get install software-properties-commo
 RUN add-apt-repository ppa:deadsnakes/ppa
-RUN apt-get update && apt-get install -y git emacs curl iputils-ping
-
+RUN apt-get update && apt-get install -y git emacs curl iputils-ping 
 # Install python/django dependencies 	    
     	    
 RUN apt-get install -y python3.6-dev python3-pip build-essential supervisor nginx libpq-dev uwsgi-plugin-python3 libcurl4-openssl-dev supervisor
