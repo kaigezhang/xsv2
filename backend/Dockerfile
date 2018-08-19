@@ -9,6 +9,11 @@ ENV BACKENDDIR=/home/blog/backend
 # Install basic apps
 # RUN rm /etc/apt/sources.list
 # COPY sources.list /etc/apt/
+RUN cd /tmp \
+	&& apt-get update \
+	&& apt-get install -y curl apt-utils wget unzip\
+	&& rm -rf /var/lib/apt/lists/*
+
 RUN add-apt-repository ppa:deadsnakes/ppa
 RUN apt-get update && apt-get install -y git emacs curl iputils-ping
 
